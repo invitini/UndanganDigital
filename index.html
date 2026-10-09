@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tezzar&Leni - invitini</title>
+<!-- Google Fonts: Cormorant Garamond (Elegan Serif) & Plus Jakarta Sans (Modern Clean Sans) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- =========================
+       AUDIO ELEMENT
+  ========================= -->
+<audio id="musik" loop="" preload="none">
+<source src="music/wedding.mp3" type="audio/mpeg"/>
+    Browser Anda tidak mendukung pemutar audio.
+  </audio>
+<!-- =========================
+       TOMBOL MUSIK MELAYANG (TOP RIGHT)
+  ========================= -->
+<button aria-label="Nyalakan atau matikan musik" class="btn-music" id="btn-music-toggle" title="Musik">
+<span class="music-icon">♫</span>
+</button>
+<!-- =========================
+       PAGE 1 — COVER UNDANGAN
+  ========================= -->
+<section class="cover-section" id="cover-page">
+<div class="cover-overlay"></div>
+<div class="cover-content">
+<p class="cover-tagline">Dear,</p>
+<p class="nama-tamu" id="namaTamu">
+  Tamu Undangan
+</p>
+<p class="cover-sub">You're Invited</p>
+<div class="cover-divider">──── ❦ ────</div>
+<p class="cover-prefix">The Wedding Celebration of</p>
+<h1 class="cover-couple" id="cover-couple-name">Raden &amp; Annisa</h1>
+<p class="cover-date" id="cover-date-text">Minggu, 9 Januari 2030</p>
+<button class="btn-open" id="btn-open-invitation">
+<span class="btn-glow-effect"></span>
+<span class="btn-text">✉ Open Invitation</span>
+</button>
+</div>
+</section>
+<!-- =========================
+       MAIN WRAPPER (DESKTOP SPLIT & MOBILE)
+  ========================= -->
+<div class="app-container">
+<!-- SISI KIRI: KONTEN UNDANGAN BISA DI-SCROLL -->
+<div class="invitation-scroll-area">
+<main id="undangan">
+<!-- 1. OPENING -->
+<section class="inv-section fade-element" id="opening">
+<div class="section-card opening-card">
+<div class="opening-img-frame">
+<img alt="Foto Mempelai Berdua" id="opening-img" loading="lazy" src="images/cover.jpg"/>
+</div>
+<p class="section-subtitle">THE WEDDING CELEBRATION OF</p>
+<h2 class="couple-title-main" id="opening-couple-name">Raden &amp; Annisa</h2>
+<p class="date-badge" id="opening-date-badge">24 . 10 . 2026</p>
+</div>
+</section>
+<!-- 2. SURAT AYAT SUCI -->
+<section class="inv-section fade-element" id="surat">
+<div class="section-card surat-card">
+<div class="ornament-leaf">🍃</div>
+<h3 class="surat-title">Ar-Rum : 21</h3>
+<div class="ornament-line">──── ❦ ────</div>
+<p class="surat-quote">
+              “Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.”
+            </p>
+<span class="surat-source">(QS. Ar-Rum: 21)</span>
+</div>
+</section>
+<!-- 3. PERKENALAN MEMPELAI -->
+<section class="inv-section fade-element" id="mempelai">
+<div class="section-card">
+<h2 class="section-heading">The Bride &amp; Groom</h2>
+<p class="section-desc">Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan syukuran pernikahan putra-putri kami:</p>
+<div class="ornament-line">──── ❦ ────</div>
+<!-- MEMPELAI PRIA -->
+<div class="mempelai-box">
+<div class="mempelai-avatar-wrapper">
+<img alt="Foto Raden Arya Pratama" class="mempelai-avatar" id="foto-pria" loading="lazy" src="images/pria.jpg"/>
+</div>
+<h3 class="mempelai-name" id="nama-lengkap-pria">Raden Arya Pratama, S.T.</h3>
+<p class="mempelai-parents" id="orangtua-pria">Putra pertama dari Bapak Ir. H. Bambang Sudiro &amp; Ibu Hj. Siti Rahmawati</p>
+<p class="mempelai-detail" id="info-pria">Lahir di Bandung • Tinggal di Bandung, Jawa Barat</p>
+</div>
+<div class="ampersand-divider">&amp;</div>
+<!-- MEMPELAI WANITA -->
+<div class="mempelai-box">
+<div class="mempelai-avatar-wrapper">
+<img alt="Foto Annisa Kusuma Putri" class="mempelai-avatar" id="foto-wanita" loading="lazy" src="images/wanita.jpg"/>
+</div>
+<h3 class="mempelai-name" id="nama-lengkap-wanita">Annisa Kusuma Putri, M.Ds.</h3>
+<p class="mempelai-parents" id="orangtua-wanita">Putri kedua dari Bapak Prof. Dr. Hendra Gunawan &amp; Ibu Dra. Endang Lestari</p>
+<p class="mempelai-detail" id="info-wanita">Lahir di Jakarta • Tinggal di Jakarta Selatan</p>
+</div>
+</div>
+</section>
+<!-- 4. DETAIL ACARA -->
+<section class="inv-section fade-element" id="acara">
+<div class="section-card">
+<h2 class="section-heading">Detail Acara</h2>
+<p class="section-desc">Rangkaian acara yang insyaAllah akan diselenggarakan pada:</p>
+<div class="ornament-line">──── ❦ ────</div>
+<div class="acara-grid">
+<!-- KARTU AKAD -->
+<div class="acara-card">
+<div class="acara-badge">AKAD NIKAH</div>
+<h4 class="acara-date" id="akad-tanggal">Minggu, 9 Januari 2030</h4>
+<p class="acara-time" id="akad-waktu">Pukul 08:00 - 10:00 WIB</p>
+<div class="acara-sep"></div>
+<p class="acara-venue">Masjid Jami' Nurul Huda Cengkudu</p>
+<p class="acara-address-short" id="acara-alamat-1">Halim Perdanakusuma, Jakarta Timur</p>
+</div>
+<!-- KARTU RESEPSI -->
+<div class="acara-card">
+<div class="acara-badge">RESEPSI</div>
+<h4 class="acara-date" id="resepsi-tanggal">Minggu, 9 Januari 2030</h4>
+<p class="acara-time" id="resepsi-waktu">Pukul 11:00 - 14:00 WIB</p>
+<div class="acara-sep"></div>
+<p class="acara-venue">Kediaman Mempelai Wanita</p>
+<p class="acara-address-short" id="acara-alamat-2">Halim Perdanakusuma, Jakarta Timur</p>
+</div>
+</div>
+<div class="lokasi-box">
+<p class="alamat-label">Lokasi Acara:</p>
+<p class="alamat-text" id="alamat-lengkap-acara">Jl. Protokol Halim Perdanakusuma No.4, RT.7/RW.9, Halim Perdana Kusumah, Kec. Makasar, Kota Jakarta Timur, DKI Jakarta 13610</p>
+<button class="btn-action" id="btn-maps">
+<span>📍 Buka Google Maps</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 5. GALERI / OUR MOMENTS -->
+<section class="inv-section fade-element" id="galeri">
+<div class="section-card">
+<h2 class="section-heading">Our Moments</h2>
+<p class="section-desc">Momen berharga perjalanan cinta kami yang terabadikan dalam lensa.</p>
+<div class="ornament-line">──── ❦ ────</div>
+<div class="gallery-grid" id="gallery-container">
+<!-- Diisi otomatis oleh script.js -->
+</div>
+</div>
+</section>
+<!-- 6. COUNTDOWN -->
+<section class="inv-section fade-element" id="countdown">
+<div class="section-card countdown-card">
+<h2 class="section-heading">Menuju Hari Bahagia</h2>
+<p class="section-desc">Tiada yang lebih kami nantikan selain kehadiran dan doa restu Bapak/Ibu/Saudara/i sekalian.</p>
+<div class="timer-container" id="timer-box">
+<div class="timer-item">
+<span class="timer-number" id="cd-days">00</span>
+<span class="timer-label">Hari</span>
+</div>
+<div class="timer-item">
+<span class="timer-number" id="cd-hours">00</span>
+<span class="timer-label">Jam</span>
+</div>
+<div class="timer-item">
+<span class="timer-number" id="cd-minutes">00</span>
+<span class="timer-label">Menit</span>
+</div>
+<div class="timer-item">
+<span class="timer-number" id="cd-seconds">00</span>
+<span class="timer-label">Detik</span>
+</div>
+</div>
+<!-- 7. ADD TO CALENDAR -->
+<div class="calendar-action-box">
+<button class="btn-action secondary" id="btn-add-calendar">
+<span>▦ Simpan ke Kalender</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 8. RSVP -->
+<section class="inv-section fade-element" id="rsvp">
+<div class="section-card">
+<h2 class="section-heading">RSVP</h2>
+<p class="section-subheading">Konfirmasi Kehadiran</p>
+<p class="section-desc">Mohon kesediaannya untuk mengonfirmasi kehadiran Anda demi kenyamanan bersama.</p>
+<div class="ornament-line">──── ❦ ────</div>
+<form class="standard-form" id="rsvp-form">
+<div class="form-group">
+<label for="rsvp-nama">Nama Lengkap</label>
+<input autocomplete="name" id="rsvp-nama" placeholder="Contoh: Jaka Sembodo" required="" type="text"/>
+</div>
+<div class="form-group">
+<label>Konfirmasi Kehadiran</label>
+<div class="radio-pill-group">
+<label class="radio-pill">
+<input checked="" name="kehadiran" type="radio" value="Hadir"/>
+<span class="pill-badge">✓ Hadir</span>
+</label>
+<label class="radio-pill">
+<input name="kehadiran" type="radio" value="Tidak dapat hadir"/>
+<span class="pill-badge">✕ Berhalangan</span>
+</label>
+</div>
+</div>
+<div class="form-group">
+<label for="rsvp-jumlah">Jumlah Tamu</label>
+<select id="rsvp-jumlah">
+<option value="1 Orang">1 Orang</option>
+<option value="2 Orang">2 Orang</option>
+</select>
+</div>
+<button class="btn-action" type="submit">
+<span>💬 Kirim Konfirmasi via WhatsApp</span>
+</button>
+</form>
+</div>
+</section>
+<!-- 9. WEDDING GIFT -->
+<section class="inv-section fade-element" id="gift">
+<div class="section-card">
+<h2 class="section-heading">Wedding Gift</h2>
+<p class="section-desc">Doa restu Anda adalah hadiah terindah bagi kami. Namun jika ingin memberikan tanda kasih secara cashless maupun fisik, Anda dapat menggunakan opsi berikut:</p>
+<div class="ornament-line">──── ❦ ────</div>
+<div class="gift-buttons">
+<button class="btn-gift-tab active" id="btn-open-transfer">
+<span>💳 Transfer Bank</span>
+</button>
+<button class="btn-gift-tab" id="btn-open-kado">
+<span>🎁 Kirim Kado</span>
+</button>
+</div>
+<!-- PANEL TRANSFER -->
+<div class="gift-panel active" id="panel-transfer">
+<div class="rekening-card">
+<div class="bank-logo-text" id="gift-bank">BANK CENTRAL ASIA (BCA)</div>
+<div class="rekening-number-box">
+<span class="rek-digits" id="gift-rekening">8735029182</span>
+<button class="btn-copy" id="btn-copy-rek" title="Salin nomor rekening">Salin</button>
+</div>
+<div class="rek-owner" id="gift-atasnama">a.n. Raden Arya Pratama</div>
+</div>
+</div>
+<!-- PANEL KADO FISIK -->
+<div class="gift-panel" id="panel-kado">
+<div class="kado-card">
+<h4 class="kado-title">Alamat Pengiriman Kado:</h4>
+<p class="kado-recipient" id="gift-penerima">Penerima: Raden &amp; Annisa</p>
+<p class="kado-address" id="gift-alamat-kado">Jl. Ciumbuleuit No. 42, Cidadap, Kota Bandung, Jawa Barat 40141 (No. HP: 0812-3456-7890)</p>
+<button class="btn-copy full" id="btn-copy-alamat" title="Salin alamat pengiriman">Salin Alamat Lengkap</button>
+</div>
+</div>
+<!-- NOTIFIKASI TOAST COPY -->
+<div class="toast-popup" id="copy-toast" role="alert">
+              ✓ Berhasil disalin ke clipboard!
+            </div>
+</div>
+</section>
+<!-- 10. UCAPAN & DOA -->
+<section class="inv-section fade-element" id="ucapan">
+<div class="section-card">
+<h2 class="section-heading">Ucapan &amp; Doa</h2>
+<p class="section-desc">Berikan doa dan ucapan terbaik untuk mengiringi langkah baru kami.</p>
+<div class="ornament-line">──── ❦ ────</div>
+<form class="standard-form" id="ucapan-form">
+<div class="form-group">
+<label for="ucapan-nama">Nama Anda</label>
+<input autocomplete="name" id="ucapan-nama" placeholder="Tuliskan nama Anda..." required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="ucapan-pesan">Doa / Ucapan</label>
+<textarea id="ucapan-pesan" placeholder="Tulis doa atau harapan terbaik untuk kedua mempelai..." required="" rows="3"></textarea>
+</div>
+<button class="btn-action" type="submit">
+<span>✉️ Kirim Doa &amp; Ucapan</span>
+</button>
+</form>
+<!-- DAFTAR UCAPAN -->
+<div class="ucapan-list-container">
+<h4 class="ucapan-list-title">Untaian Doa Terbaru (<span id="ucapan-count">0</span>)</h4>
+<div class="ucapan-list" id="ucapan-list">
+<!-- Diisi otomatis oleh script.js -->
+</div>
+</div>
+
+</div>
+</section>
+<!-- 11. FOOTER -->
+<footer class="site-footer">
+<div class="footer-inner">
+<p class="footer-couple" id="footer-couple-name">Raden &amp; Annisa</p>
+<p class="footer-love">With love, always ♡</p>
+<p class="footer-musik">Song : 크러쉬 (Crush) – Beautiful</p>
+<div class="footer-sep"></div>
+<p class="footer-copy">Copyright © 2026 All Right Reserved by <strong>invitini</strong></p>
+</div>
+</footer>
+<!-- RUANG BAWAH AGAR TIDAK TERTUTUP BOTTOM NAV -->
+<div class="bottom-nav-spacer"></div>
+</main>
+<!-- 12. BOTTOM FLOATING NAVIGATION -->
+<nav aria-label="Navigasi Menu Undangan" class="bottom-navigation" id="bottom-nav">
+<a class="nav-item" data-section="mempelai" href="#mempelai">
+<span class="nav-icon">♡</span>
+<span class="nav-label">Mempelai</span>
+</a>
+<a class="nav-item" data-section="acara" href="#acara">
+<span class="nav-icon">▦</span>
+<span class="nav-label">Acara</span>
+</a>
+<a class="nav-item" data-section="galeri" href="#galeri">
+<span class="nav-icon">▣</span>
+<span class="nav-label">Galeri</span>
+</a>
+<a class="nav-item" data-section="rsvp" href="#rsvp">
+<span class="nav-icon">✉</span>
+<span class="nav-label">RSVP</span>
+</a>
+<a class="nav-item" data-section="gift" href="#gift">
+<span class="nav-icon">♧</span>
+<span class="nav-label">Gift</span>
+</a>
+</nav>
+</div>
+<!-- SISI KANAN: FOTO MEMPELAI FULL HEIGHT KHUSUS DESKTOP (STICKY) -->
+<aside class="desktop-side-hero">
+<div class="side-hero-overlay"></div>
+<img alt="Foto Pasangan Mempelai - The Wedding of Raden &amp; Annisa" class="side-hero-img" id="desktop-hero-img" src="images/galeri2.jpg"/>
+<div class="side-hero-caption">
+<p class="side-tag">THE WEDDING OF</p>
+<h2 class="side-title" id="desktop-hero-couple">Raden &amp; Annisa</h2>
+<p class="side-date" id="desktop-hero-date">24 . 10 . 2026</p>
+</div>
+</aside>
+</div>
+<!-- =========================
+       LIGHTBOX / FULLSCREEN GALERI MODAL
+  ========================= -->
+<div aria-hidden="true" class="lightbox-modal" id="gallery-lightbox" role="dialog">
+<button aria-label="Tutup foto" class="lightbox-btn close" id="lightbox-close">×</button>
+<button aria-label="Foto sebelumnya" class="lightbox-btn prev" id="lightbox-prev">‹</button>
+<button aria-label="Foto berikutnya" class="lightbox-btn next" id="lightbox-next">›</button>
+<div class="lightbox-content">
+<img alt="Tampilan Penuh Foto Momen" id="lightbox-img" src=""/>
+<div class="lightbox-counter" id="lightbox-counter">1 / 6</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
